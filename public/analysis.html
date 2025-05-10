@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thread Analysis</title>
+  <link rel="stylesheet" href="style-analysis.css" />
+</head>
+<body>
+  <h2>🔍 Thread Behavior Analysis</h2>
+
+  <div id="precheck"></div>
+
+  <form id="analyzeForm" style="display: none">
+    <label for="duration">Time Period :</label>
+    <input type="number" id="duration" name="duration" required min="1" />
+    <button type="submit" class="btn">Analyze</button>
+    <button type="button" id="resetBtn" class="btn reset">Reset</button>
+  </form>
+
+  <div id="result"></div>
+
+  <button id="toTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆ Top</button>
+
+  <script src="analysis.js"></script>
+  
+</body>
+</html>

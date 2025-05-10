@@ -53,3 +53,10 @@ app.get('/data/grouped_threads.json', (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
+
+const analyzeRoute = require('./routes/analyze');
+app.use(analyzeRoute);
+
+app.get('/analyze', (req, res) => {
+  // existing analysis logic here...
+});

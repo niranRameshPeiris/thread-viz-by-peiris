@@ -13,6 +13,8 @@ It groups threads by name and TID, shows how their state and stack traces change
 - 📊 Timeline table showing state and method changes
 - 🎨 Color-coded by thread state and stack hash
 - 🔍 Click any cell to view full stack trace (with TID/NID)
+- ✨ Highlight selected thread cell for better navigation
+- 📈 Analyze threads stuck in same stack/state for a given period
 - ♻️ Reset and re-analyze easily
 
 ---
@@ -42,32 +44,13 @@ Open your browser and navigate to: [http://localhost:3000](http://localhost:3000
 
 ---
 
-## 📁 Folder Structure
-
-```
-project-root/
-├── public/
-│   ├── index.html         # Frontend UI
-│   ├── style.css          # Styling
-│   └── app.js             # Frontend JS logic
-├── data/
-│   ├── dumps/             # Uploaded .txt thread dumps
-│   └── grouped_threads.json  # Output file (auto generated)
-├── parse.js               # Backend thread dump parser
-├── server.js              # Express server
-├── package.json
-└── README.md
-```
-
----
-
 ## 📤 Upload Format
 
 - Upload any number of plain text thread dumps
 - Files should be named like:
   ```
-  thread_dump_2025-05-10-11-57-03.txt
-  thread_dump_2025-05-10-11-58-15.txt
+  thread_dump_2025-05-10-11:57:03.txt
+  thread_dump_2025-05-10-11:58:15.txt
   ```
 
 ---
@@ -78,3 +61,15 @@ Click the "Reset" button to:
 - Clear uploaded dumps
 - Delete the output JSON
 - Reset the UI
+
+---
+
+## 🧪 Analyze Stuck Threads
+
+Visit `/analysis.html` to:
+- 🔍 Detect threads stuck in the same **stack trace** or **state** over time
+- ⏱ Input a minimum duration (e.g., 10 seconds)
+- 📃 View formatted results with thread name, TID, NID
+- 🧹 Reset the analysis view easily
+
+> ⚠️ You must run an initial **Analyze** from the main page to generate `grouped_threads.json`

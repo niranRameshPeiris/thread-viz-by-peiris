@@ -48,7 +48,7 @@ function groupThreadsByNameAndTid() {
 
   for (const file of files) {
     const content = fs.readFileSync(path.join(DUMP_DIR, file), 'utf-8');
-    const timestamp = file.match(/\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2}/)?.[0] || file;
+    const timestamp = file.match(/\d{4}-\d{2}-\d{2}_\d{2}:\d{2}:\d{2}/)?.[0] || file;
 
     // Split file into individual thread blocks
     const blocks = content.split(/\n(?=")/); // Each thread block starts with a quote =

@@ -41,6 +41,10 @@ body {
   .btn:hover {
     opacity: 0.9;
   }
+  #stack-display pre {
+    text-align: left;
+    margin: 0;
+  }
   
   #stack-display {
     height: 30vh;
@@ -141,4 +145,10 @@ body {
     z-index: 15;
     text-align: left;
     background: #fff;
+  }
+
+  .selected-cell {
+    outline: 2px solid #007bff;
+    z-index: 1;
+    position: relative;
   }
