@@ -1,0 +1,25 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ThreadDumpVisualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>Thread Dump Visualizer</h2>
+
+  <form id="uploadForm">
+    <input type="file" id="dumps" name="dumps" multiple required />
+    <button type="submit" class="btn">Analyze</button>
+    <button type="button" class="btn reset" id="resetBtn">Reset</button>
+  </form>
+
+  <div id="stack-display" style="display: none;"></div>
+
+  <div id="thread-table"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

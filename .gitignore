@@ -1,0 +1,4 @@
+node_modules/
+data/dumps/
+data/grouped_threads.json
+.env
