@@ -22,8 +22,8 @@ It groups threads by name and TID, shows how their state and stack traces change
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/thread-dump-visualizer.git
-cd thread-dump-visualizer
+git clone https://github.com/niranRameshPeiris/thread-viz-by-peiris.git
+cd ThreadVizByPeiris
 ```
 
 ### 2. Install Dependencies
@@ -78,9 +78,3 @@ Click the "Reset" button to:
 - Clear uploaded dumps
 - Delete the output JSON
 - Reset the UI
-
----
-
-## 📎 License
-
-MIT License — use freely, modify, and contribute!
