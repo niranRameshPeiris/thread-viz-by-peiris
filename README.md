@@ -23,7 +23,7 @@ It groups threads by name and TID, shows how their state and stack traces change
 
 ```bash
 git clone https://github.com/niranRameshPeiris/thread-viz-by-peiris.git
-cd ThreadVizByPeiris
+cd thread-viz-by-peiris
 ```
 
 ### 2. Install Dependencies
