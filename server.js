@@ -12,6 +12,10 @@ const OUTPUT_FILE = path.join(__dirname, 'data/grouped_threads.json');
 // Serve static frontend
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Ensure dump directory exists
+const dumpDir = path.join(__dirname, 'data/dumps');
+fs.mkdirSync(dumpDir, { recursive: true });
+
 // Setup multer for file uploads
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, DUMP_DIR),
